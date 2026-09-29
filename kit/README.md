@@ -18,9 +18,9 @@ Rendered files go to `social/x/<YYYY-MM-DD-HHMM-slug>/` or `social/ig/<…>/`, t
 `https://raw.githubusercontent.com/Ashok-29/jijnasa-media/main/<path>`. Check each URL returns 200 before creating the Buffer post.
 
 ## Photos (licensed, credited)
-Photos are **not** composited into slides. They go into the Buffer post as their own items, by direct URL:
-- Wikimedia Commons: licence PD / CC0 / CC BY / CC BY-SA only (read LicenseShortName, Artist, Credit via the Commons API
-  `action=query&prop=imageinfo&iiprop=url|size|mime|extmetadata&iiurlwidth=1280`), direct `thumburl` from `upload.wikimedia.org`.
-- NASA Image and Video Library (`images-api.nasa.gov`): NASA-made media only; skip anything credited to a third party.
+Photos are **not** composited into slides. They go into the Buffer post as their own items, by direct URL.
+Scheduled runs read the web with WebFetch only, which **cannot read Wikimedia Commons or its APIs**, so Commons images are not used (licence unverifiable). Allowed:
+- NASA Image and Video Library (`images-api.nasa.gov`): NASA-made media only (no third-party photographer); use the `~large.jpg` asset on `images-assets.nasa.gov`, never `~orig`.
+- An image on a page that explicitly states CC BY / CC BY-SA / CC0 / public domain for that image (open-access paper, agency image page).
 Credit format: `Photo: <title>, <author>, <licence>` in the caption / last X post and on the carousel's sources slide.
-Instagram crops every carousel item to the first item's ratio (4:5 here): choose photos whose subject is centred.
+Instagram crops every carousel item to the first item's ratio (4:5 here): choose photos whose subject is centred. Original charts and diagrams from this kit are the mainstay; a post without a photo is fine.
